@@ -35,6 +35,11 @@ namespace MyCrud
             {
                 UserId = (sender as DataGridView).SelectedCells[0].Value.ToString();
                 Text = UserId;
+                var model = DB.pGetStudentById(UserId);
+                tbFname.Text = model.fname;
+                tbLname.Text = model.lname;
+                dtBirthDate.Value = model.birthdate;
+                cbGender.SelectedIndex = Convert.ToInt32(model.gender);
             }
         }
 
@@ -48,6 +53,20 @@ namespace MyCrud
             DB.pStudentAddOrEdit(new StudentAddOrEditModel
             { 
                 id = "0",
+                birthdate = dtBirthDate.Value,
+                fname = tbFname.Text,
+                lname = tbLname.Text,
+                gender = cbGender.SelectedIndex.ToString()
+            });
+            var result = DB.pStudentSearch(tbLnameSearch.Text);
+            gvStudent.DataSource = result;
+        }
+
+        private void btUpd_Click(object sender, EventArgs e)
+        {
+            DB.pStudentAddOrEdit(new StudentAddOrEditModel
+            {
+                id = UserId,
                 birthdate = dtBirthDate.Value,
                 fname = tbFname.Text,
                 lname = tbLname.Text,

@@ -31,6 +31,16 @@ namespace MyCrud
                 return "ok";
             }
         }
+
+        public static StudentAddOrEditModel pGetStudentById(string id)
+        {
+            using (SqlConnection db = new SqlConnection(con))
+            {
+                return db.Query<StudentAddOrEditModel>("pGetStudentById", new { @id = id}, commandType: System.Data.CommandType.StoredProcedure).FirstOrDefault();                
+            }
+        }
     }
+
+    
 }
 

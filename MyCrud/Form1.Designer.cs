@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -49,6 +49,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.cbGender = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.btUpd = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvStudent)).BeginInit();
@@ -56,6 +57,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btUpd);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.cbGender);
             this.panel1.Controls.Add(this.label4);
@@ -149,8 +151,8 @@
             // fi
             // 
             this.fi.DataPropertyName = "fi";
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.fi.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.fi.DefaultCellStyle = dataGridViewCellStyle1;
             this.fi.HeaderText = "Фамилия имя";
             this.fi.Name = "fi";
             this.fi.ReadOnly = true;
@@ -252,6 +254,17 @@
             this.label5.TabIndex = 11;
             this.label5.Text = "Пол";
             // 
+            // btUpd
+            // 
+            this.btUpd.Location = new System.Drawing.Point(716, 41);
+            this.btUpd.Name = "btUpd";
+            this.btUpd.Size = new System.Drawing.Size(75, 23);
+            this.btUpd.TabIndex = 12;
+            this.btUpd.Text = "Изменить";
+            this.btUpd.UseCompatibleTextRendering = true;
+            this.btUpd.UseVisualStyleBackColor = true;
+            this.btUpd.Click += new System.EventHandler(this.btUpd_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -293,6 +306,7 @@
         private System.Windows.Forms.DateTimePicker dtBirthDate;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cbGender;
+        private System.Windows.Forms.Button btUpd;
     }
 }
 
