@@ -19,8 +19,17 @@ namespace MyCrud
                 return db.Query<StudentModel>("pStudentSearch", 
                     new { @lname = lname }, 
                     commandType: System.Data.CommandType.StoredProcedure).ToList();
+            }            
+        }
+
+        public static string pStudentAddOrEdit(StudentAddOrEditModel model)
+        {
+            using (SqlConnection db = new SqlConnection(con))
+            {
+                DynamicParameters p = new DynamicParameters(model);
+                db.Execute("pStudentAddOrEdit", p, commandType: System.Data.CommandType.StoredProcedure);
+                return "ok";
             }
-            
         }
     }
 }

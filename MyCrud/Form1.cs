@@ -12,6 +12,7 @@ namespace MyCrud
 {
     public partial class Form1 : Form
     {
+        string UserId;
         public Form1()
         {
             InitializeComponent();
@@ -19,7 +20,40 @@ namespace MyCrud
 
         private void btSearch_Click(object sender, EventArgs e)
         {
-            var result = DB.pStudentSearch(tbLname.Text);
+            var result = DB.pStudentSearch(tbLnameSearch.Text);
+            gvStudent.DataSource = result;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            //gvStudent.AutoGenerateColumns = false;
+        }
+
+        private void gvStudent_SelectionChanged(object sender, EventArgs e)
+        {
+            if ((sender as DataGridView).SelectedRows.Count > 0)
+            {
+                UserId = (sender as DataGridView).SelectedCells[0].Value.ToString();
+                Text = UserId;
+            }
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btAdd_Click(object sender, EventArgs e)
+        {
+            DB.pStudentAddOrEdit(new StudentAddOrEditModel
+            { 
+                id = "0",
+                birthdate = dtBirthDate.Value,
+                fname = tbFname.Text,
+                lname = tbLname.Text,
+                gender = cbGender.SelectedIndex.ToString()
+            });
+            var result = DB.pStudentSearch(tbLnameSearch.Text);
             gvStudent.DataSource = result;
         }
     }
