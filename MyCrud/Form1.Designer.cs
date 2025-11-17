@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btUpd = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -250,8 +250,8 @@
             // fi
             // 
             this.fi.DataPropertyName = "fi";
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.fi.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.fi.DefaultCellStyle = dataGridViewCellStyle5;
             this.fi.HeaderText = "Фамилия имя";
             this.fi.Name = "fi";
             this.fi.ReadOnly = true;
@@ -300,6 +300,7 @@
             this.miDelete.Name = "miDelete";
             this.miDelete.Size = new System.Drawing.Size(180, 22);
             this.miDelete.Text = "Удалить";
+            this.miDelete.Click += new System.EventHandler(this.miDelete_Click);
             // 
             // Form1
             // 

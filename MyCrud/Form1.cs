@@ -105,5 +105,17 @@ namespace MyCrud
                 gvStudent.DataSource = result;
             }
         }
+
+        private void miDelete_Click(object sender, EventArgs e)
+        {
+            var confirmResult = MessageBox.Show("Удалить " + gvStudent.SelectedCells[1].Value.ToString() + "?",
+                                   "Удаление!",
+                                   MessageBoxButtons.YesNo,
+                                   MessageBoxIcon.Warning);
+            if (confirmResult == DialogResult.Yes)
+            {
+
+            }
+        }
     }
 }

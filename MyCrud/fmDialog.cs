@@ -21,7 +21,7 @@ namespace MyCrud
             this.mode = mode;
             this.id = id;
             if (mode == "edit")
-            {                
+            {
                 var model = DB.pGetStudentById(id);
                 tbFname.Text = model.fname;
                 tbLname.Text = model.lname;
@@ -32,17 +32,15 @@ namespace MyCrud
 
         private void btOk_Click(object sender, EventArgs e)
         {
-            if (mode == "add")
+            DB.pStudentAddOrEdit(new StudentAddOrEditModel
             {
-                DB.pStudentAddOrEdit(new StudentAddOrEditModel
-                {
-                    id = "0",
-                    birthdate = dtBirthDate.Value,
-                    fname = tbFname.Text,
-                    lname = tbLname.Text,
-                    gender = cbGender.SelectedIndex.ToString()
-                });
-            }
+                id = mode == "add" ? "0" : id,
+                birthdate = dtBirthDate.Value,
+                fname = tbFname.Text,
+                lname = tbLname.Text,
+                gender = cbGender.SelectedIndex.ToString()
+            });
+
             this.DialogResult = DialogResult.OK;
         }
     }
