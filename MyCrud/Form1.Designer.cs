@@ -28,8 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btUpd = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cbGender = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.dtBirthDate = new System.Windows.Forms.DateTimePicker();
+            this.label3 = new System.Windows.Forms.Label();
+            this.tbFname = new System.Windows.Forms.TextBox();
+            this.btAdd = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tbLname = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btSearch = new System.Windows.Forms.Button();
@@ -40,19 +51,14 @@
             this.fi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.birthdate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btAdd = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.tbLname = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.tbFname = new System.Windows.Forms.TextBox();
-            this.dtBirthDate = new System.Windows.Forms.DateTimePicker();
-            this.label4 = new System.Windows.Forms.Label();
-            this.cbGender = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.btUpd = new System.Windows.Forms.Button();
+            this.cmGV = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.miAdd = new System.Windows.Forms.ToolStripMenuItem();
+            this.miEdit = new System.Windows.Forms.ToolStripMenuItem();
+            this.miDelete = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvStudent)).BeginInit();
+            this.cmGV.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -74,6 +80,98 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1191, 129);
             this.panel1.TabIndex = 0;
+            // 
+            // btUpd
+            // 
+            this.btUpd.Location = new System.Drawing.Point(716, 41);
+            this.btUpd.Name = "btUpd";
+            this.btUpd.Size = new System.Drawing.Size(75, 23);
+            this.btUpd.TabIndex = 12;
+            this.btUpd.Text = "Изменить";
+            this.btUpd.UseCompatibleTextRendering = true;
+            this.btUpd.UseVisualStyleBackColor = true;
+            this.btUpd.Click += new System.EventHandler(this.btUpd_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(436, 94);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(27, 13);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Пол";
+            // 
+            // cbGender
+            // 
+            this.cbGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbGender.FormattingEnabled = true;
+            this.cbGender.Items.AddRange(new object[] {
+            "Женский",
+            "Мужской"});
+            this.cbGender.Location = new System.Drawing.Point(531, 87);
+            this.cbGender.Name = "cbGender";
+            this.cbGender.Size = new System.Drawing.Size(144, 21);
+            this.cbGender.TabIndex = 10;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(436, 65);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(86, 13);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Дата рождения";
+            // 
+            // dtBirthDate
+            // 
+            this.dtBirthDate.Location = new System.Drawing.Point(531, 61);
+            this.dtBirthDate.Name = "dtBirthDate";
+            this.dtBirthDate.Size = new System.Drawing.Size(144, 20);
+            this.dtBirthDate.TabIndex = 8;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(436, 41);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(29, 13);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Имя";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // tbFname
+            // 
+            this.tbFname.Location = new System.Drawing.Point(531, 34);
+            this.tbFname.Name = "tbFname";
+            this.tbFname.Size = new System.Drawing.Size(144, 20);
+            this.tbFname.TabIndex = 6;
+            // 
+            // btAdd
+            // 
+            this.btAdd.Location = new System.Drawing.Point(716, 10);
+            this.btAdd.Name = "btAdd";
+            this.btAdd.Size = new System.Drawing.Size(75, 23);
+            this.btAdd.TabIndex = 5;
+            this.btAdd.Text = "Добавить";
+            this.btAdd.UseCompatibleTextRendering = true;
+            this.btAdd.UseVisualStyleBackColor = true;
+            this.btAdd.Click += new System.EventHandler(this.btAdd_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(436, 15);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(56, 13);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Фамилия";
+            // 
+            // tbLname
+            // 
+            this.tbLname.Location = new System.Drawing.Point(531, 8);
+            this.tbLname.Name = "tbLname";
+            this.tbLname.Size = new System.Drawing.Size(144, 20);
+            this.tbLname.TabIndex = 3;
             // 
             // panel3
             // 
@@ -132,6 +230,7 @@
             this.fi,
             this.birthdate,
             this.gender});
+            this.gvStudent.ContextMenuStrip = this.cmGV;
             this.gvStudent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gvStudent.Location = new System.Drawing.Point(0, 129);
             this.gvStudent.Name = "gvStudent";
@@ -151,8 +250,8 @@
             // fi
             // 
             this.fi.DataPropertyName = "fi";
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.fi.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.fi.DefaultCellStyle = dataGridViewCellStyle4;
             this.fi.HeaderText = "Фамилия имя";
             this.fi.Name = "fi";
             this.fi.ReadOnly = true;
@@ -173,97 +272,34 @@
             this.gender.Name = "gender";
             this.gender.ReadOnly = true;
             // 
-            // btAdd
+            // cmGV
             // 
-            this.btAdd.Location = new System.Drawing.Point(716, 10);
-            this.btAdd.Name = "btAdd";
-            this.btAdd.Size = new System.Drawing.Size(75, 23);
-            this.btAdd.TabIndex = 5;
-            this.btAdd.Text = "Добавить";
-            this.btAdd.UseCompatibleTextRendering = true;
-            this.btAdd.UseVisualStyleBackColor = true;
-            this.btAdd.Click += new System.EventHandler(this.btAdd_Click);
+            this.cmGV.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.miAdd,
+            this.miEdit,
+            this.miDelete});
+            this.cmGV.Name = "cmGV";
+            this.cmGV.Size = new System.Drawing.Size(181, 92);
             // 
-            // label2
+            // miAdd
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(436, 15);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Фамилия";
+            this.miAdd.Name = "miAdd";
+            this.miAdd.Size = new System.Drawing.Size(180, 22);
+            this.miAdd.Text = "Добавить";
+            this.miAdd.Click += new System.EventHandler(this.miAdd_Click);
             // 
-            // tbLname
+            // miEdit
             // 
-            this.tbLname.Location = new System.Drawing.Point(531, 8);
-            this.tbLname.Name = "tbLname";
-            this.tbLname.Size = new System.Drawing.Size(144, 20);
-            this.tbLname.TabIndex = 3;
+            this.miEdit.Name = "miEdit";
+            this.miEdit.Size = new System.Drawing.Size(180, 22);
+            this.miEdit.Text = "Изменить";
+            this.miEdit.Click += new System.EventHandler(this.miEdit_Click);
             // 
-            // label3
+            // miDelete
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(436, 41);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(29, 13);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Имя";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // tbFname
-            // 
-            this.tbFname.Location = new System.Drawing.Point(531, 34);
-            this.tbFname.Name = "tbFname";
-            this.tbFname.Size = new System.Drawing.Size(144, 20);
-            this.tbFname.TabIndex = 6;
-            // 
-            // dtBirthDate
-            // 
-            this.dtBirthDate.Location = new System.Drawing.Point(531, 61);
-            this.dtBirthDate.Name = "dtBirthDate";
-            this.dtBirthDate.Size = new System.Drawing.Size(144, 20);
-            this.dtBirthDate.TabIndex = 8;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(436, 65);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(86, 13);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Дата рождения";
-            // 
-            // cbGender
-            // 
-            this.cbGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbGender.FormattingEnabled = true;
-            this.cbGender.Items.AddRange(new object[] {
-            "Женский",
-            "Мужской"});
-            this.cbGender.Location = new System.Drawing.Point(531, 87);
-            this.cbGender.Name = "cbGender";
-            this.cbGender.Size = new System.Drawing.Size(144, 21);
-            this.cbGender.TabIndex = 10;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(436, 94);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(27, 13);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "Пол";
-            // 
-            // btUpd
-            // 
-            this.btUpd.Location = new System.Drawing.Point(716, 41);
-            this.btUpd.Name = "btUpd";
-            this.btUpd.Size = new System.Drawing.Size(75, 23);
-            this.btUpd.TabIndex = 12;
-            this.btUpd.Text = "Изменить";
-            this.btUpd.UseCompatibleTextRendering = true;
-            this.btUpd.UseVisualStyleBackColor = true;
-            this.btUpd.Click += new System.EventHandler(this.btUpd_Click);
+            this.miDelete.Name = "miDelete";
+            this.miDelete.Size = new System.Drawing.Size(180, 22);
+            this.miDelete.Text = "Удалить";
             // 
             // Form1
             // 
@@ -273,6 +309,7 @@
             this.Controls.Add(this.gvStudent);
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
@@ -280,6 +317,7 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvStudent)).EndInit();
+            this.cmGV.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -307,6 +345,10 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cbGender;
         private System.Windows.Forms.Button btUpd;
+        private System.Windows.Forms.ContextMenuStrip cmGV;
+        private System.Windows.Forms.ToolStripMenuItem miAdd;
+        private System.Windows.Forms.ToolStripMenuItem miEdit;
+        private System.Windows.Forms.ToolStripMenuItem miDelete;
     }
 }
 

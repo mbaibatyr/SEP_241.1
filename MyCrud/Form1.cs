@@ -75,5 +75,35 @@ namespace MyCrud
             var result = DB.pStudentSearch(tbLnameSearch.Text);
             gvStudent.DataSource = result;
         }
+
+        private void miAdd_Click(object sender, EventArgs e)
+        {
+            fmDialog fmadd = new fmDialog("add", "0");            
+            DialogResult dr = fmadd.ShowDialog(this);
+            if (dr == DialogResult.Cancel)
+            {
+                fmadd.Close();
+            }
+            else if (dr == DialogResult.OK)
+            {
+                var result = DB.pStudentSearch(tbLnameSearch.Text);
+                gvStudent.DataSource = result;
+            }
+        }
+
+        private void miEdit_Click(object sender, EventArgs e)
+        {
+            fmDialog fmadd = new fmDialog("edit", UserId);
+            DialogResult dr = fmadd.ShowDialog(this);
+            if (dr == DialogResult.Cancel)
+            {
+                fmadd.Close();
+            }
+            else if (dr == DialogResult.OK)
+            {
+                var result = DB.pStudentSearch(tbLnameSearch.Text);
+                gvStudent.DataSource = result;
+            }
+        }
     }
 }
