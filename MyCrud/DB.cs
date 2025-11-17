@@ -1,6 +1,7 @@
 ﻿using Dapper;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -20,6 +21,21 @@ namespace MyCrud
                     new { @lname = lname }, 
                     commandType: System.Data.CommandType.StoredProcedure).ToList();
             }            
+        }
+
+        public static DataTable pStudentSearchDT(string lname)
+        {
+            using (SqlConnection db = new SqlConnection(con))
+            {
+                using (SqlCommand cmd = new SqlCommand("pStudentSearch", db))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@lname", lname);
+                    DataTable dt = new DataTable();
+                    dt.Load(cmd.ExecuteReader());
+                    return dt;
+                }
+            }
         }
 
         public static string pStudentAddOrEdit(StudentAddOrEditModel model)

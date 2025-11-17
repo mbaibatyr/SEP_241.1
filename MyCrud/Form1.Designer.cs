@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btUpd = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -55,7 +55,11 @@
             this.miAdd = new System.Windows.Forms.ToolStripMenuItem();
             this.miEdit = new System.Windows.Forms.ToolStripMenuItem();
             this.miDelete = new System.Windows.Forms.ToolStripMenuItem();
+            this.cbReportType = new System.Windows.Forms.ComboBox();
+            this.btReport = new System.Windows.Forms.Button();
+            this.sdReport = new System.Windows.Forms.SaveFileDialog();
             this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvStudent)).BeginInit();
             this.cmGV.SuspendLayout();
@@ -176,6 +180,8 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.Info;
+            this.panel3.Controls.Add(this.btReport);
+            this.panel3.Controls.Add(this.cbReportType);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel3.Location = new System.Drawing.Point(862, 0);
             this.panel3.Name = "panel3";
@@ -250,8 +256,8 @@
             // fi
             // 
             this.fi.DataPropertyName = "fi";
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.fi.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.fi.DefaultCellStyle = dataGridViewCellStyle1;
             this.fi.HeaderText = "Фамилия имя";
             this.fi.Name = "fi";
             this.fi.ReadOnly = true;
@@ -279,28 +285,50 @@
             this.miEdit,
             this.miDelete});
             this.cmGV.Name = "cmGV";
-            this.cmGV.Size = new System.Drawing.Size(181, 92);
+            this.cmGV.Size = new System.Drawing.Size(129, 70);
             // 
             // miAdd
             // 
             this.miAdd.Name = "miAdd";
-            this.miAdd.Size = new System.Drawing.Size(180, 22);
+            this.miAdd.Size = new System.Drawing.Size(128, 22);
             this.miAdd.Text = "Добавить";
             this.miAdd.Click += new System.EventHandler(this.miAdd_Click);
             // 
             // miEdit
             // 
             this.miEdit.Name = "miEdit";
-            this.miEdit.Size = new System.Drawing.Size(180, 22);
+            this.miEdit.Size = new System.Drawing.Size(128, 22);
             this.miEdit.Text = "Изменить";
             this.miEdit.Click += new System.EventHandler(this.miEdit_Click);
             // 
             // miDelete
             // 
             this.miDelete.Name = "miDelete";
-            this.miDelete.Size = new System.Drawing.Size(180, 22);
+            this.miDelete.Size = new System.Drawing.Size(128, 22);
             this.miDelete.Text = "Удалить";
             this.miDelete.Click += new System.EventHandler(this.miDelete_Click);
+            // 
+            // cbReportType
+            // 
+            this.cbReportType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbReportType.FormattingEnabled = true;
+            this.cbReportType.Items.AddRange(new object[] {
+            "CSV",
+            "EXCEL"});
+            this.cbReportType.Location = new System.Drawing.Point(21, 43);
+            this.cbReportType.Name = "cbReportType";
+            this.cbReportType.Size = new System.Drawing.Size(121, 21);
+            this.cbReportType.TabIndex = 0;
+            // 
+            // btReport
+            // 
+            this.btReport.Location = new System.Drawing.Point(168, 43);
+            this.btReport.Name = "btReport";
+            this.btReport.Size = new System.Drawing.Size(75, 23);
+            this.btReport.TabIndex = 1;
+            this.btReport.Text = "Отчет";
+            this.btReport.UseVisualStyleBackColor = true;
+            this.btReport.Click += new System.EventHandler(this.btReport_Click);
             // 
             // Form1
             // 
@@ -315,6 +343,7 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvStudent)).EndInit();
@@ -350,6 +379,9 @@
         private System.Windows.Forms.ToolStripMenuItem miAdd;
         private System.Windows.Forms.ToolStripMenuItem miEdit;
         private System.Windows.Forms.ToolStripMenuItem miDelete;
+        private System.Windows.Forms.ComboBox cbReportType;
+        private System.Windows.Forms.Button btReport;
+        private System.Windows.Forms.SaveFileDialog sdReport;
     }
 }
 

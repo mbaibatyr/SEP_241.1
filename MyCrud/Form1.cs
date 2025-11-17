@@ -51,7 +51,7 @@ namespace MyCrud
         private void btAdd_Click(object sender, EventArgs e)
         {
             DB.pStudentAddOrEdit(new StudentAddOrEditModel
-            { 
+            {
                 id = "0",
                 birthdate = dtBirthDate.Value,
                 fname = tbFname.Text,
@@ -78,7 +78,7 @@ namespace MyCrud
 
         private void miAdd_Click(object sender, EventArgs e)
         {
-            fmDialog fmadd = new fmDialog("add", "0");            
+            fmDialog fmadd = new fmDialog("add", "0");
             DialogResult dr = fmadd.ShowDialog(this);
             if (dr == DialogResult.Cancel)
             {
@@ -117,6 +117,17 @@ namespace MyCrud
                 DB.pStudentDel(UserId);
                 var result = DB.pStudentSearch(tbLnameSearch.Text);
                 gvStudent.DataSource = result;
+            }
+        }
+
+        private void btReport_Click(object sender, EventArgs e)
+        {
+            sdReport.Filter = "Excel files (*.xlsx)|*.xlsx";
+            sdReport.Title = "Save to Excel";
+            sdReport.FileName = "Report";
+            if (sdReport.ShowDialog() == DialogResult.OK)
+            {
+                Text = sdReport.FileName;
             }
         }
     }
