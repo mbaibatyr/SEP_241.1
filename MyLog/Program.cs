@@ -13,6 +13,7 @@ namespace MyLog
                     outputTemplate: "{Timestamp:yyyy-MM-dd HH:mm:ss} [{Level:u3}] {Message:lj}{NewLine}{Exception}")
                 .CreateLogger();
             Console.WriteLine("Hello, World!");
+            logger.Error("Hello, Exception!");
         }
     }
 }
