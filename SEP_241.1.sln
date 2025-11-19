@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCrud", "MyCrud\MyCrud.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyWinFormCore", "MyWinFormCore\MyWinFormCore.csproj", "{DD886554-618D-49C9-8C19-D24B971B66F5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyLog", "MyLog\MyLog.csproj", "{1238F632-8DD6-4C4A-A6A3-B705D73AC185}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{DD886554-618D-49C9-8C19-D24B971B66F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD886554-618D-49C9-8C19-D24B971B66F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DD886554-618D-49C9-8C19-D24B971B66F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1238F632-8DD6-4C4A-A6A3-B705D73AC185}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1238F632-8DD6-4C4A-A6A3-B705D73AC185}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1238F632-8DD6-4C4A-A6A3-B705D73AC185}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1238F632-8DD6-4C4A-A6A3-B705D73AC185}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
